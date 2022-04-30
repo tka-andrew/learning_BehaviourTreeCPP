@@ -5,8 +5,6 @@ project(learningBehaviourTree)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(${PROJECT_NAME}_tutorial01 ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial01/tutorial01.cpp)
-
 # REFERENCE: https://www.youtube.com/watch?v=ED-WUk440qc&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4&index=3
 # DOWNLOAD ALL THE SUBMODULES
 find_package(Git QUIET)
@@ -31,4 +29,14 @@ endif()
 
 add_subdirectory(thirdparty/behaviortree_cpp_v3)
 
+
+list(APPEND TreeNodesSources
+    TreeNodes/dummy_nodes.cpp
+)
+
+# Tutorial 01
+# Need to install or copy the xml file to the correct directory
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial01/my_tree.xml DESTINATION ${CMAKE_BINARY_DIR})
+add_executable(${PROJECT_NAME}_tutorial01 ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial01/tutorial01.cpp ${TreeNodesSources})
 target_link_libraries(${PROJECT_NAME}_tutorial01 behaviortree_cpp_v3)
+target_include_directories(${PROJECT_NAME}_tutorial01 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/TreeNodes)
