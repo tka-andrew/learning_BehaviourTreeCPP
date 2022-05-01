@@ -16,7 +16,7 @@ This is just a project of implementing the tutorials of [BehaviourTree.CPP](http
 ### To run any executables
 For example, executable of tutorial01
 ```
-./learningBehaviourTree_tutorial01
+./tutorial01
 ```
 
 ### To exit the docker container
@@ -53,5 +53,5 @@ cmake --build .
 ### Run any of the exectubales 
 For example, 
 ```
-./learningBehaviourTree_tutorial01
+./tutorial01
 ```
