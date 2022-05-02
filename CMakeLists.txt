@@ -51,3 +51,12 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial02/tutorial02_tree.xml DESTINATION
 add_executable(tutorial02 ${Tutorial02Sources})
 target_link_libraries(tutorial02 behaviortree_cpp_v3)
 target_include_directories(tutorial02 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial02)
+
+# Tutorial 03
+list(APPEND Tutorial03Sources
+    Tutorial03/tutorial03.cpp
+    Tutorial03/tutorial03_nodes.cpp
+)
+add_executable(tutorial03 ${Tutorial03Sources})
+target_link_libraries(tutorial03 behaviortree_cpp_v3)
+target_include_directories(tutorial03 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial03)
