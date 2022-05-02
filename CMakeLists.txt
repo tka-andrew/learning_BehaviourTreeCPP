@@ -40,3 +40,14 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial01/my_tree.xml DESTINATION ${CMAKE
 add_executable(tutorial01 ${Tutorial01Sources})
 target_link_libraries(tutorial01 behaviortree_cpp_v3)
 target_include_directories(tutorial01 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial01)
+
+# Tutorial 02
+list(APPEND Tutorial02Sources
+    Tutorial02/tutorial02.cpp
+    Tutorial02/tutorial02_nodes.cpp
+)
+# Need to install or copy the xml file to the correct directory
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial02/tutorial02_tree.xml DESTINATION ${CMAKE_BINARY_DIR})
+add_executable(tutorial02 ${Tutorial02Sources})
+target_link_libraries(tutorial02 behaviortree_cpp_v3)
+target_include_directories(tutorial02 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial02)

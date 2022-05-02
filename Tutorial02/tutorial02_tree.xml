@@ -1,0 +1,12 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+       <Sequence name="root_sequence">
+           <SaySomething     message="hello" />
+           <SaySomething2    message="this works too" />
+           <ThinkWhatToSay   text="{the_answer}"/>
+           <SaySomething     message="{the_answer}" />
+           <SetBlackboard    output_key="the_answer" value="Just to show you can use this built-in action to write value into an entry." />
+           <SaySomething     message="{the_answer}" />
+       </Sequence>
+    </BehaviorTree>
+</root>
