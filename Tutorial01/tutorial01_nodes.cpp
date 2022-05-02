@@ -1,6 +1,6 @@
-#include "dummy_nodes.h"
+#include "tutorial01_nodes.h"
 
-namespace DummyNodes
+namespace T01DummyNodes
 {
 
 BT::NodeStatus CheckBattery()

@@ -1,10 +1,10 @@
-#ifndef SIMPLE_BT_NODES_H
-#define SIMPLE_BT_NODES_H
+#ifndef T01_NODES_H
+#define T01_NODES_H
 
 #include "behaviortree_cpp_v3/behavior_tree.h"
 #include "behaviortree_cpp_v3/bt_factory.h"
 
-namespace DummyNodes
+namespace T01DummyNodes
 {
 
 BT::NodeStatus CheckBattery();
@@ -44,4 +44,4 @@ class ApproachObject : public BT::SyncActionNode
 
 } // end namespace
 
-#endif   // SIMPLE_BT_NODES_H
+#endif   // T01_NODES_H

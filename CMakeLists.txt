@@ -33,10 +33,10 @@ add_subdirectory(thirdparty/behaviortree_cpp_v3)
 # Tutorial 01
 list(APPEND Tutorial01Sources
     Tutorial01/tutorial01.cpp
-    Tutorial01/dummy_nodes.cpp
+    Tutorial01/tutorial01_nodes.cpp
 )
 # Need to install or copy the xml file to the correct directory
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial01/my_tree.xml DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial01/tutorial01_tree.xml DESTINATION ${CMAKE_BINARY_DIR})
 add_executable(tutorial01 ${Tutorial01Sources})
 target_link_libraries(tutorial01 behaviortree_cpp_v3)
 target_include_directories(tutorial01 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial01)
