@@ -1,6 +1,7 @@
 #include "tutorial05_nodes.h"
 
 #include "behaviortree_cpp_v3/bt_factory.h"
+#include "behaviortree_cpp_v3/behavior_tree.h"
 #include "behaviortree_cpp_v3/loggers/bt_cout_logger.h"
 #include "behaviortree_cpp_v3/loggers/bt_minitrace_logger.h"
 #include "behaviortree_cpp_v3/loggers/bt_file_logger.h"
