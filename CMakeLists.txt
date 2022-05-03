@@ -87,3 +87,12 @@ list(APPEND Tutorial06Sources
 add_executable(tutorial06 ${Tutorial06Sources})
 target_link_libraries(tutorial06 behaviortree_cpp_v3)
 target_include_directories(tutorial06 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial06)
+
+# Tutorial 07
+list(APPEND Tutorial07Sources
+    Tutorial07/tutorial07.cpp
+    Tutorial07/myLegacyCode.cpp
+)
+add_executable(tutorial07 ${Tutorial07Sources})
+target_link_libraries(tutorial07 behaviortree_cpp_v3)
+target_include_directories(tutorial07 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial07)
