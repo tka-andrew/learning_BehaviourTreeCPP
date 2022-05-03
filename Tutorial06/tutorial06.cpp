@@ -3,6 +3,26 @@
 #include "behaviortree_cpp_v3/bt_factory.h"
 #include "behaviortree_cpp_v3/behavior_tree.h"
 
+template <> inline T06Interface::Pose2D BT::convertFromString(StringView str)
+{
+    printf("Converting string: \"%s\"\n", str.data());
+
+    // real numbers separated by semicolons
+    auto parts = splitString(str, ';');
+    if (parts.size() != 3)
+    {
+        throw RuntimeError("invalid input)");
+    }
+    else
+    {
+        T06Interface::Pose2D output;
+        output.x = convertFromString<double>(parts[0]);
+        output.y = convertFromString<double>(parts[1]);
+        output.theta = convertFromString<double>(parts[2]);
+        return output;
+    }
+}
+
 static const char *xml_text = R"(
 <root main_tree_to_execute = "MainTree">
 
