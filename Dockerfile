@@ -7,7 +7,8 @@ ENV TZ=Etc/UTC
 # Install CMake and some necessary packages
 # REFERENCE: https://github.com/BehaviorTree/BehaviorTree.CPP/
 # The libzmq3-dev libboost-dev are the recommended dependencies for BehaviourTreeCpp
-RUN apt-get update && apt-get install build-essential ca-certificates cmake git libzmq3-dev libboost-dev -y --no-install-recommends
+# The libboost-all-dev is added to support coroutine of tutorial09
+RUN apt-get update && apt-get install build-essential ca-certificates cmake git libzmq3-dev libboost-dev libboost-all-dev -y --no-install-recommends
 
 RUN mkdir -p /src/LearningBehaviourTree/build
 COPY . /src/LearningBehaviourTree/

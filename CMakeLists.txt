@@ -104,3 +104,11 @@ list(APPEND Tutorial08Sources
 add_executable(tutorial08 ${Tutorial08Sources})
 target_link_libraries(tutorial08 behaviortree_cpp_v3)
 target_include_directories(tutorial08 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial08)
+
+# Tutorial 09
+list(APPEND Tutorial09Sources
+    Tutorial09/tutorial09.cpp
+)
+add_executable(tutorial09 ${Tutorial09Sources})
+target_link_libraries(tutorial09 behaviortree_cpp_v3)
+target_include_directories(tutorial09 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Tutorial09)
